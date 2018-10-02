@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    //Colors for app
+    <color name="CyberGrape">#5F4B8B</color>
+    <color name="Jet">#353535</color>
+    <color name="Gainsboro">#D9D9D9</color>
+    <color name="White">#ffffff</color>
+    <color name="DarkSlateGray">#284B63</color>
+
+    //Futura
+    <color name="Futura1">#33173c</color>
+    <color name="Futura2">#1b1537</color>
+    <color name="Futura3">#f3b998</color>
+    <color name="Futura4">#f26370</color>
+
+    //Avenir
+    <color name="Avenir1">#7c7c99</color>
+    <color name="Avenir2">#b0b0c2</color>
+    <color name="Avenir3">#d7d7e0</color>
+    <color name="Avenir4">#f1f1f4</color>
+
+
+</resources>

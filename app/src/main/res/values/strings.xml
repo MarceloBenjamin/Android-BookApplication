@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Book</string>
+    <string name="SingInText1">Faça login para acessar a biblioteca de livros. Caso não seja cadastrado, clique no botão \"cadastrar\".</string>
+</resources>
