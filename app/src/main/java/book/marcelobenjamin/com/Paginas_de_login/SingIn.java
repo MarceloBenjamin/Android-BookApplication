@@ -1,4 +1,4 @@
-package book.marcelobenjamin.com;
+package book.marcelobenjamin.com.Paginas_de_login;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -14,7 +14,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+
+import book.marcelobenjamin.com.R;
 
 public class SingIn extends AppCompatActivity {
 
@@ -76,11 +77,15 @@ public class SingIn extends AppCompatActivity {
         Button singUP = findViewById(R.id.singUP);
         Button reset = findViewById(R.id.reset);
         TextView backBT = findViewById(R.id.backReset);
+        EditText edEmail = findViewById(R.id.emailIN);
+        EditText edSenha = findViewById(R.id.senhaIN);
 
         singIN.setVisibility(View.VISIBLE);
         singUP.setVisibility(View.VISIBLE);
         reset.setVisibility(View.VISIBLE);
         backBT.setVisibility(View.VISIBLE);
+        edEmail.setText("");
+        edSenha.setText("");
     }
 
     private void logar(String email, String senha) {
@@ -89,7 +94,8 @@ public class SingIn extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),"Login realizado com sucesso", Toast.LENGTH_LONG).show();
+                            Intent go = new Intent("ACAO_HOME");
+                            startActivity(go);
                         } else {
                             Toast.makeText(getApplicationContext(),"Usuário ou senha incorretos", Toast.LENGTH_LONG).show();
                         }

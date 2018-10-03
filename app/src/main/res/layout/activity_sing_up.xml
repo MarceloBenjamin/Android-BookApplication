@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Gainsboro"
-    tools:context=".SingUp">
+    tools:context=".Paginas_de_login.SingUp">
 
 
 
@@ -72,13 +72,17 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        android:visibility="visible"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/btstyle2"
         android:text="Registrar"
         android:textColor="@color/Futura1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senha" />
+        app:layout_constraintTop_toBottomOf="@+id/senha"
+        app:layout_constraintVertical_bias="0.076" />
 
     <TextView
         android:id="@+id/textView5"

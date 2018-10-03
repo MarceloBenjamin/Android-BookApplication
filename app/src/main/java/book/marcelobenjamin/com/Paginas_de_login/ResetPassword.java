@@ -1,4 +1,4 @@
-package book.marcelobenjamin.com;
+package book.marcelobenjamin.com.Paginas_de_login;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+
+import book.marcelobenjamin.com.R;
 
 public class ResetPassword extends AppCompatActivity {
 
@@ -33,12 +35,12 @@ public class ResetPassword extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if((edEmail.getText()+"").equals("")) {
+                    Toast.makeText(getApplicationContext(), "Insira um e-mail", Toast.LENGTH_LONG).show();
+                }
+                else {
                     btSend.setVisibility(View.INVISIBLE);
                     backBT.setVisibility(View.INVISIBLE);
                     resetPassword(edEmail.getText()+"");
-                }
-                else {
-                    Toast.makeText(getApplicationContext(), "Insira um e-mail", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -58,6 +60,10 @@ public class ResetPassword extends AppCompatActivity {
     }
 
     public void resetPassword(String email) {
+
+        final TextView backBT = findViewById(R.id.backBT);
+        final Button btSend = findViewById(R.id.send);
+
         mAuth.sendPasswordResetEmail(email)
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
                     @Override
@@ -67,6 +73,8 @@ public class ResetPassword extends AppCompatActivity {
                             Intent go = new Intent("ACAO_SINGIN");
                             startActivity(go);
                         } else {
+                            backBT.setVisibility(View.VISIBLE);
+                            btSend.setVisibility(View.VISIBLE);
                             Toast.makeText(getApplicationContext(),"Falha ao encaminhar um e-mail", Toast.LENGTH_LONG).show();
                         }
                     }

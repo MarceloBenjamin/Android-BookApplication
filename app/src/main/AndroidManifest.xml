@@ -9,27 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".SingIn">
+        <activity android:name=".Paginas_de_login.SingIn" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="ACAO_SINGIN" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SingUp">
+        <activity android:name=".Paginas_de_login.SingUp">
             <intent-filter>
                 <action android:name="ACAO_SINGUP" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResetPassword">
-            <intent-filter >
+        <activity android:name=".Paginas_de_login.ResetPassword">
+            <intent-filter>
                 <action android:name="ACAO_RESET" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Paginas_de_interacao.HomePG">
+            <intent-filter>
+                <action android:name="ACAO_HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
         </activity>
     </application>
 

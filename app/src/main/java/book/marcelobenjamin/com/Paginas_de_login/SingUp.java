@@ -1,4 +1,4 @@
-package book.marcelobenjamin.com;
+package book.marcelobenjamin.com.Paginas_de_login;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import book.marcelobenjamin.com.R;
 
 public class SingUp extends AppCompatActivity {
 
@@ -61,6 +63,9 @@ public class SingUp extends AppCompatActivity {
 
     private void createAccount(String email, String senha) {
 
+        final TextView backBT = findViewById(R.id.backBT);
+        final Button singUP = findViewById(R.id.singUP);
+
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, senha)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -71,6 +76,8 @@ public class SingUp extends AppCompatActivity {
                             Intent go = new Intent("ACAO_SINGIN");
                             startActivity(go);
                         } else {
+                            backBT.setVisibility(View.VISIBLE);
+                            singUP.setVisibility(View.VISIBLE);
                             Toast.makeText(getApplicationContext(),"Falha ao criar um novo usuário", Toast.LENGTH_LONG).show();
                         }
                     }
