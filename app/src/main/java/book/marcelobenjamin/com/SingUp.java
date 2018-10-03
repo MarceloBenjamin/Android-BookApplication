@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,10 +27,10 @@ public class SingUp extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        final EditText email = findViewById(R.id.email);
+        final EditText email = findViewById(R.id.emailReset);
         final EditText senha = findViewById(R.id.senha);
-
-        Button singUP = findViewById(R.id.singUP);
+        final TextView backBT = findViewById(R.id.backBT);
+        final Button singUP = findViewById(R.id.singUP);
 
         singUP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,11 +40,23 @@ public class SingUp extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Campos sinalizados com \" * \" não podem ser nulos", Toast.LENGTH_LONG).show();
                 }
                 else {
+                    singUP.setVisibility(View.INVISIBLE);
+                    backBT.setVisibility(View.INVISIBLE);
                     createAccount(email.getText()+"", senha.getText()+"");
                 }
             }
         });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        final TextView backBT = findViewById(R.id.backBT);
+        final Button singUP = findViewById(R.id.singUP);
+
+        backBT.setVisibility(View.VISIBLE);
+        singUP.setVisibility(View.VISIBLE);
     }
 
     private void createAccount(String email, String senha) {

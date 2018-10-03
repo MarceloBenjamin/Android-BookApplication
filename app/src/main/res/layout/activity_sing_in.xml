@@ -20,8 +20,52 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateTint="@color/Futura1"
+        app:layout_constraintBottom_toBottomOf="@+id/singIN"
+        app:layout_constraintEnd_toEndOf="@+id/singIN"
+        app:layout_constraintStart_toStartOf="@+id/singIN"
+        app:layout_constraintTop_toTopOf="@+id/singIN" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateTint="@color/Futura1"
+        app:layout_constraintBottom_toBottomOf="@+id/singUP"
+        app:layout_constraintEnd_toEndOf="@+id/singUP"
+        app:layout_constraintStart_toStartOf="@+id/singUP"
+        app:layout_constraintTop_toTopOf="@+id/singUP" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminateTint="@color/Futura1"
+        app:layout_constraintBottom_toBottomOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="@+id/reset"
+        app:layout_constraintStart_toStartOf="@+id/reset"
+        app:layout_constraintTop_toTopOf="@+id/reset" />
+
+    <TextView
+        android:id="@+id/backReset"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Gainsboro"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="@+id/reset"
+        app:layout_constraintStart_toStartOf="@+id/reset"
+        app:layout_constraintTop_toTopOf="@+id/reset" />
+
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
@@ -30,6 +74,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/btstyle2"
         android:text="Esqueci minha senha"
+        android:visibility="visible"
         android:textColor="@color/Futura1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,6 +154,7 @@
         android:background="@drawable/btstyle1"
         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
         android:text="Acessar"
+        android:visibility="visible"
         android:textColor="@color/Gainsboro"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.0"
@@ -124,6 +170,7 @@
         android:background="@drawable/btstyle1"
         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
         android:text="Cadastrar"
+        android:visibility="visible"
         android:textColor="@color/Gainsboro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
