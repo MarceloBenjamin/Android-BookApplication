@@ -8,8 +8,8 @@
     tools:context=".Paginas_de_login.SingIn">
 
     <ImageView
-        android:layout_width="295sp"
-        android:layout_height="295sp"
+        android:layout_width="295dp"
+        android:layout_height="295dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/img02"

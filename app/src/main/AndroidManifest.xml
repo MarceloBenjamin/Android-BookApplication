@@ -17,14 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Paginas_de_login.SingUp">
+        <activity android:name=".Paginas_de_login.SingUp" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="ACAO_SINGUP" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Paginas_de_login.ResetPassword">
+        <activity android:name=".Paginas_de_login.ResetPassword" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="ACAO_RESET" />
 

@@ -89,6 +89,9 @@ public class SingIn extends AppCompatActivity {
     }
 
     private void logar(String email, String senha) {
+
+        final Button singIN = findViewById(R.id.singIN);
+
         authy.signInWithEmailAndPassword(email, senha)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -97,6 +100,7 @@ public class SingIn extends AppCompatActivity {
                             Intent go = new Intent("ACAO_HOME");
                             startActivity(go);
                         } else {
+                            singIN.setVisibility(View.VISIBLE);
                             Toast.makeText(getApplicationContext(),"Usuário ou senha incorretos", Toast.LENGTH_LONG).show();
                         }
                     }
