@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="book.marcelobenjamin.com">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
@@ -9,34 +16,93 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Paginas_de_login.SingIn" android:screenOrientation="portrait">
+        \\Pagina principal
+        <activity android:name=".Paginas_de_interacao.HomePG">
             <intent-filter>
+                <action android:name="ACAO_HOME" />
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="ACAO_SINGIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Paginas_de_login.SingUp" android:screenOrientation="portrait">
+        \\Páginas
+        <activity android:name=".Paginas_de_login.SingUp">
             <intent-filter>
                 <action android:name="ACAO_SINGUP" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Paginas_de_login.ResetPassword" android:screenOrientation="portrait">
+        <activity android:name=".Paginas_de_login.ResetPassword">
             <intent-filter>
                 <action android:name="ACAO_RESET" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Paginas_de_interacao.HomePG">
+        <activity android:name=".Paginas_de_login.SingIn">
             <intent-filter>
-                <action android:name="ACAO_HOME" />
+                <action android:name="ACAO_SINGIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Paginas_de_interacao.ProductPG">
+            <intent-filter>
+                <action android:name="ACAO_PRODUCT" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Mapa.MapsActivity"
+            android:label="@string/title_activity_maps">
+            <intent-filter>
+                <action android:name="ACAO_MAPS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Paginas_do_usuario.NewBook">
+            <intent-filter>
+                <action android:name="ACAO_ADDBOOK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Paginas_do_usuario.UserPage">
+            <intent-filter>
+                <action android:name="ACAO_USERPAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Paginas_de_interacao.SearchAct">
+            <intent-filter>
+                <action android:name="ACAO_SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Paginas_do_usuario.Msn">
+            <intent-filter>
+                <action android:name="ACAO_MSN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -24,8 +24,9 @@ public class ResetPassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
+        getWindow().setStatusBarColor(getColor(R.color.Gainsboro3));
 
-        final EditText edEmail = findViewById(R.id.emailReset);
+        final EditText edEmail = findViewById(R.id.email);
         final Button btSend = findViewById(R.id.send);
         final TextView backBT = findViewById(R.id.backBT);
 
@@ -69,13 +70,13 @@ public class ResetPassword extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),"E-mail para alterar senha enviado", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Foi encaminhado um e-mail para alterar a senha!", Toast.LENGTH_LONG).show();
                             Intent go = new Intent("ACAO_SINGIN");
                             startActivity(go);
                         } else {
                             backBT.setVisibility(View.VISIBLE);
                             btSend.setVisibility(View.VISIBLE);
-                            Toast.makeText(getApplicationContext(),"Falha ao encaminhar um e-mail", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Falha ao encaminhar o e-mail para alterar a senha!", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

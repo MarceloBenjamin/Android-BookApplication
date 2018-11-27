@@ -1,4 +1,15 @@
 <resources>
-    <string name="app_name">Book</string>
+    <string name="app_name">Book Store</string>
     <string name="SingInText1">Faça login para acessar a biblioteca de livros. Caso não seja cadastrado, clique no botão \"cadastrar\".</string>
+
+
+    <string name="TextoDescricao">\"Um personagem tão humano que, com dificuldades para se relacionar com as mulheres e uma extrema infelicidade nas tentativas de fazer novos amigos, confia praticamente todas as suas alegrias e fraquezas ao velho companheiro dr. Watson, médico reformado do Exército, parceiro na verificação de mistérios e biógrafo usado por sir Arthur Conan Doyle para registrar os feitos de Holmes e dar vida às suas andanças pela Europa na resolução de terríveis crimes.\nNeste volume que é pertencente ao box exclusivo de Sherlock Holmes e foi preparado de maneira minuciosa, como exigiria seu protagonista, reunimos uma seleção dos melhores contos encontrados em obras “Sherlock Holmes” Se as próximas páginas farão você viajar por incríveis mistérios e estimularão ainda mais seu pensamento crítico e analítico?\nElementar, meu caro leitor.\"</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_test">Test</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>
