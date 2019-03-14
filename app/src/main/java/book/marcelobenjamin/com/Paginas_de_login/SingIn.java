@@ -31,6 +31,7 @@ public class SingIn extends AppCompatActivity {
         singUp();
         resetPassword();
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -81,7 +82,7 @@ public class SingIn extends AppCompatActivity {
         singIN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if((edEmail.getText()+"").equals("") || (edSenha.getText()+"").equals("")) {
+                if((edEmail.getText().toString()).equals("") || (edSenha.getText().toString()).equals("")) {
                     Toast.makeText(getApplicationContext(),"Obs: Os campos não podem ser nulos", Toast.LENGTH_LONG).show();
                 }
                 else {
@@ -108,5 +109,4 @@ public class SingIn extends AppCompatActivity {
                     }
                 });
     }
-
 }
